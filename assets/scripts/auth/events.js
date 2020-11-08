@@ -10,7 +10,7 @@ const ui = require('./ui')
 const onSignUp = function (event) {
   console.log('onSignUp in events.js ran')
   // prevents default action of refreshing page
-  event.prevenDefault()
+  event.preventDefault()
   // send data from form to the API
   const data = getFormFields(event.target)
 
@@ -25,7 +25,7 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   console.log('onSignIn in events.js ran')
   // prevents default action of refreshing page
-  event.prevenDefault()
+  event.preventDefault()
   // send data from form to the API
   const data = getFormFields(event.target)
 
@@ -38,9 +38,9 @@ const onSignIn = function (event) {
 
 // CHANGE PASSWORD event handler
 const onChangePassword = function (event) {
-  console.log('onChangePassword in events.js ran')
+  // console.log('onChangePassword in events.js ran')
   // prevents default action of refreshing page
-  event.prevenDefault()
+  event.preventDefault()
   // send data from form to the API
   const data = getFormFields(event.target)
 
@@ -53,9 +53,9 @@ const onChangePassword = function (event) {
 
 // SIGN OUT event handler
 const onSignOut = function (event) {
-  console.log('onSignOut in events.js ran')
+  // console.log('onSignOut in events.js ran')
   // prevents default action of refreshing page
-  event.prevenDefault()
+  event.preventDefault()
   // send data from form to the API
   const data = getFormFields(event.target)
 
@@ -66,8 +66,8 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
-const addHanlers = () => {
-  console.log('addHanlers in events.js ran')
+const addHandlers = () => {
+  // console.log('addHandlers in events.js ran')
   $('#sign-up-form').on('submit', onSignUp)
   $('#sign-in-form').on('submit', onSignIn)
   $('#change-password-form').on('submit', onChangePassword)
@@ -75,5 +75,5 @@ const addHanlers = () => {
 }
 
 module.exports = {
-  addHanlers
+  addHandlers
 }
