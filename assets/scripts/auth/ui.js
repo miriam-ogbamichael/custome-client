@@ -12,9 +12,9 @@ const signUpSuccess = function (response) {
   $('form').trigger('reset')
 
   // times how long the message shows on the browser, makes it go away after 7000 milliseconds
-  setTimeout(function () {
-    $('#message').hide()
-  }, 7000)
+  // setTimeout(function () {
+  //   $('#message').hide()
+  // }, 7000)
 }
 
 // Gives the user a message indicating that an error has occured with their sign up
@@ -28,27 +28,28 @@ const signUpFailure = function () {
   $('form').trigger('reset')
 
   // times how long the message shows on the browser, makes it go away after 7000 milliseconds
-  setTimeout(function () {
-    $('#message').hide()
-  }, 7000)
+
+  // setTimeout(function () {
+  //   $('#message').hide()
+  // }, 7000)
 }
 
 // Gives the user a message indicating that they've signed in successfully
-const signInSuccess = function (data) {
+const signInSuccess = function (response) {
   console.log('signInSuccess in ui.js ran')
   // actual text user see's in broswer
-  $('#message').text('You have signed in successfully!')
+  $('#message').text('You have signed in successfully, ' + response.user.email + ' !')
   console.log('sign-in success message ran')
 
   // stores user's sign in data in store.js to be used for future authentication requests
-  store.user = data.user
+  store.user = response.user
   // claears the form of any data the user populated with to submit any authentication requests they used.
   $('form').trigger('reset')
 
   // times how long the message shows on the browser, makes it go away after 7000 milliseconds
-  setTimeout(function () {
-    $('#message').hide()
-  }, 7000)
+  // setTimeout(function () {
+  //   $('#message').hide()
+  // }, 7000)
 }
 
 // Gives the user a message indicating that an error has occured with their sign in
@@ -61,9 +62,9 @@ const signInFailure = function () {
   // claears the form of any data the user populated with to submit any authentication requests they used.
   $('form').trigger('reset')
   // times how long the message shows on the browser, makes it go away after 7000 milliseconds
-  setTimeout(function () {
-    $('#message').hide()
-  }, 7000)
+  // setTimeout(function () {
+  //   $('#message').hide()
+  // }, 7000)
 }
 
 // Gives the user a message indicating that they've changed their password successfully
@@ -77,9 +78,9 @@ const changePasswordSuccess = function () {
   $('form').trigger('reset')
 
   // times how long the message shows on the browser, makes it go away after 7000 milliseconds
-  setTimeout(function () {
-    $('#message').hide()
-  }, 7000)
+  // setTimeout(function () {
+  //   $('#message').hide()
+  // }, 7000)
 }
 
 // Gives the user a message indicating that an error has occured with their password change attempt
@@ -93,9 +94,9 @@ const changePasswordFailure = function () {
   $('form').trigger('reset')
 
   // times how long the message shows on the browser, makes it go away after 7000 milliseconds
-  setTimeout(function () {
-    $('#message').hide()
-  }, 7000)
+  // setTimeout(function () {
+  //   $('#message').hide()
+  // }, 7000)
 }
 
 // Gives the user a message indicating that they've signed out successfully
@@ -111,9 +112,9 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
 
   // times how long the message shows on the browser, makes it go away after 7000 milliseconds
-  setTimeout(function () {
-    $('#message').hide()
-  }, 7000)
+  // setTimeout(function () {
+  //   $('#message').hide()
+  // }, 7000)
 }
 
 // Gives the user a message indicating that an error has occured with their sign out
@@ -127,9 +128,9 @@ const signOutFailure = function () {
   $('form').trigger('reset')
 
   // times how long the message shows on the browser, makes it go away after 7000 milliseconds
-  setTimeout(function () {
-    $('#message').hide()
-  }, 7000)
+  // setTimeout(function () {
+  //   $('#message').hide()
+  // }, 7000)
 }
 
 // exports all contents of this file to be used in other files
