@@ -103,7 +103,7 @@ const changePasswordFailure = function () {
 const signOutSuccess = function () {
   console.log('signOutSuccess in ui.js ran')
   // actual text user see's in broswer
-  $('#message').text('You have signed out successfully!')
+  $('#message').text('See you later!')
   console.log('sign-out success message ran')
 
   // removes stored data and signs them out
