@@ -5,20 +5,16 @@ const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
 
-const onCultivateReminder = function (event) {
+const onCultivateCreate = function (event) {
   event.preventDefault()
-  console.log('onCultivateReminder ran!')
+  console.log('onCultivateCreate ran!')
 
   const data = getFormFields(event.target)
-  api.cultivate(data)
-    .then(ui.onCultivateSuccess)
-    .catch(ui.onCultivateFailure)
-}
-
-const addHandlers = () => {
-  $('#cultivate-reminder-form').on('submit', onCultivateReminder)
+  api.create(data)
+    .then(ui.onCultivateCreateSuccess)
+    .catch(ui.onCultivateCreateFailure)
 }
 
 module.exports = {
-  addHandlers
+  onCultivateCreate
 }

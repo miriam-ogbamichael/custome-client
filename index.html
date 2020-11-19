@@ -81,31 +81,38 @@
     <section>
         <h3>Checkout These Reminders!</h3><br>
         <!-- Cultivate reminder form -->
-        <form id="cultivate-reminder-form" class="border">
+        <form id="cultivate-create-form" class="border">
           <fieldset>
-            <legend>To Cultivate a Mindset</legend>
+            <legend>Cultivate a Mindset</legend>
 
-            <input id="cultivatee-reminder-button" type="submit" name="Cultivate" value="Cultivate">
+              <input required type="text" name="reminder[cultivate]" placeholder="Cultivate Reminder">
+              <button type="submit">Create</button>
+
           </fieldset>
         </form><br>
+        <div id="cultivate-create-message" class="user-feedback"></div>
         <!-- Magnify reminder form -->
-        <form id="magnify-reminder-form" class="border">
+        <form id="magnify-create-form" class="border">
           <fieldset>
-            <legend>To Magnify a Mindset</legend>
+            <legend>Magnify a Mindset</legend>
 
-            <input id="magnify-reminder-button" type="submit" name="Magnify" value="Magnify">
+            <input required type="text" name="reminder[magnify]" placeholder="Magnify Reminder">
+            <button type="submit">Create</button>
           </fieldset>
         </form><br>
         <!-- Energize reminder form -->
-        <form id="energize-reminder-form" class="border">
+        <form id="energize-create-form" class="border">
           <fieldset>
-            <legend>To Energize a Mindset</legend>
+            <legend>Energize a Mindset</legend>
 
-            <input id="energize-reminder-button" type="submit" name="Energize" value="Energize">
+            <input required type="text" name="reminder[energize]" placeholder="Energize Reminder">
+            <button type="submit">Create</button>
           </fieldset>
         </form><br>
-
-      <h3>Soon You'll Be Customizing Your Own!</h3>
+      <section>
+        <div id="error-message" class="user-feedback"></div>
+        <div id="reminder-display"></div>
+      </section>
     </section>
 
     </body>
