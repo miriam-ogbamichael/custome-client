@@ -38,6 +38,9 @@ const signInSuccess = function (response) {
   $('#sign-in-form').hide()
   $('#change-password-form').show()
   $('#sign-out-form').show()
+  $('#cultivate-create-form').show()
+  $('#cultivate-index-form').show()
+  $('#reminder-message').hide()
 }
 
 // Gives the user a message indicating that an error has occured with their sign in
@@ -76,6 +79,15 @@ const signOutSuccess = function () {
   store.user = null
   // claears the form of any data the user populated with to submit any authentication requests they used.
   $('form').trigger('reset')
+  $('#sign-up-form').show()
+  $('#sign-in-form').show()
+  $('#change-password-form').hide()
+  $('#sign-out-form').hide()
+  $('#cultivate-create-form').hide()
+  $('#cultivate-index-form').hide()
+  $('#cultivate-update-form').hide()
+  $('#cultivate-delete-form').hide()
+  $('#reminder-message').hide()
 }
 
 // Gives the user a message indicating that an error has occured with their sign out

@@ -71,6 +71,8 @@ const addHandlers = () => {
   $('#sign-in-form').show()
   $('#change-password-form').hide()
   $('#sign-out-form').hide()
+  $('#cultivate-create-form').hide()
+  $('#cultivate-index-form').hide()
 }
 
 module.exports = {

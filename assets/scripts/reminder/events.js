@@ -52,8 +52,8 @@ const addHandlers = () => {
   $('#cultivate-index-form').on('submit', onCultivateIndex)
   $('#cultivate-update-form').on('submit', onCultivateUpdate)
   $('#cultivate-delete-form').on('submit', onCultivateDelete)
-  $('#cultivate-create-form').show()
-  $('#cultivate-index-form').show()
+  $('#cultivate-create-form').hide()
+  $('#cultivate-index-form').hide()
   $('#cultivate-update-form').hide()
   $('#cultivate-delete-form').hide()
 }
