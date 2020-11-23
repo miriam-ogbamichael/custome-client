@@ -52,3 +52,5 @@ https://git.heroku.com/custome-api.git
 - Ajax
 
 9. ## Unsolved Problems
+
+Only the title seems to be updating rather than both the title and the reminder both updating.
