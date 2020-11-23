@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>CustoME</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+      <h1>CustoME</h1><br>
+      <p id="message"> </p>
+      <!-- Sign up section -->
+      <section>
+        <form id="sign-up-form" class="border">
+          <fieldset>
+            <legend>Lets get you signed up!</legend>
+
+            <input id="sign-up-email" type="text" name="credentials[email]" placeholder="Email">
+
+            <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password">
+
+
+            <input id="sign-up-password-confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+
+            <input type="submit" value="Sign up!">
+          </fieldset>
+        </form>
+      </section><br>
+      <!-- Sign in section -->
+      <section>
+        <form id="sign-in-form" class="border">
+          <fieldset>
+            <legend>Welcome! Sign in and get started!</legend>
+
+            <input id="sign-in-email" type="text" name="credentials[email]" placeholder="Email">
+
+            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password">
+
+            <input type="submit" value="Sign in!">
+          </fieldset>
+        </form>
+      </section><br>
+      <!-- Change password section -->
+      <section>
+        <form id="change-password-form" class="border">
+          <fieldset>
+            <legend>Change your password!</legend>
+
+            <input id="old-password" name="passwords[old]" type="password" placeholder="Old Password">
+
+            <input id="new-password" name="passwords[new]" type="password" placeholder="New Password">
+
+            <input type="submit" value="Change Password!">
+          </fieldset>
+        </form>
+      </section><br>
+      <!-- Sign out section -->
+    <section>
+      <form id="sign-out-form" class="border">
+        <fieldset>
+          <legend>See you soon!</legend>
+
+          <input id="sign-out-button" type="submit" name="Sign out!" value="Sign out!">
+        </fieldset>
+      </form>
+    </section><br><br><br>
+
+    <h2>Cultivate A Mindset</h2>
+    <h2>With CustoME Reminders</h2><br>
+    <p id="reminder-message"></p>
+        <!-- Cultivate reminder form -->
+      <section>
+        <form id="cultivate-create-form" class="border">
+          <fieldset>
+            <legend>Create A Reminder</legend>
+              <input required type="text" name="reminder[title]" placeholder="Title">
+              <input required type="text" name="reminder[reminder]" placeholder="Message">
+              <input type="submit" value="Create Reminder"><br>
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <form id="cultivate-update-form" class="border">
+          <fieldset>
+            <legend>Update A Reminder</legend>
+              <input required type="text" name="reminder[id]" id="reminder-id-update" placeholder="Reminder ID"/>
+
+              <input required type="text" name="reminder[title]" placeholder="Updated title"/>
+
+              <input required type="text" name="reminder[message]" placeholder="Updated message"/>
+              <input type="submit" value="Update Reminder">
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <form id="cultivate-delete-form" class="border">
+          <fieldset>
+            <legend>Delete Reminder</legend>
+              <input required type="text" name="reminder[id]" placeholder="Reminder ID"/>
+              <input type="submit" value="Delete Reminder">
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <form id='cultivate-index-form' class="border">
+            <legend>See All Reminders</legend>
+              <input type="submit" value="Get Reminders">
+              <div id="cultivate-reminder-display"></div>
+        </form>
+      </section>
+
+      <section>
+        <div id="error-message" class="user-feedback"></div>
+        <div id="reminder-display"></div>
+      </section>
+
+    </body>
+
+</html>
