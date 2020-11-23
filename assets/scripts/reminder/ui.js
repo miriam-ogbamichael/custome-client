@@ -2,15 +2,18 @@
 // const store = require('./../store')
 
 const onCultivateCreateSuccess = function (response) {
-  console.log('onCultivateCreateSuccess response ran ', response)
   $('#reminder-message').text('You have successfully created a reminder!')
 
   $('form').trigger('reset')
+
+  $('#cultivate-create-form').show()
+  $('#cultivate-index-form').show()
+  $('#cultivate-update-form').hide()
+  $('#cultivate-delete-form').hide()
 }
 
-const onCultivateCreateFailure = function (error) {
+const onCultivateCreateFailure = function () {
   $('#reminder-message').text('Error occured when creating a reminder.')
-  console.error('onCultivateFailure ran. Error is :', error)
 
   $('form').trigger('reset')
 }
@@ -31,39 +34,38 @@ const onCultivateIndexSuccess = function (res) {
   })
 
   $('form').trigger('reset')
+
+  $('#cultivate-create-form').show()
+  $('#cultivate-index-form').show()
+  $('#cultivate-update-form').show()
+  $('#cultivate-delete-form').show()
 }
 
-const onCultivateIndexFailure = function (error) {
+const onCultivateIndexFailure = function () {
   $('#reminder-message').text('Error occured with showing reminders.')
-  console.error('onCultivateIndexFailure ran. Error is :', error)
 
   $('form').trigger('reset')
 }
 
 const onCultivateUpdateSuccess = function (data) {
-  console.log('onCultivateUpdateSuccess data ran ', data)
   $('#reminder-message').text('Click "Get Reminders" to see your updated reminders!')
 
   $('form').trigger('reset')
 }
 
-const onCultivateUpdateFailure = function (error) {
+const onCultivateUpdateFailure = function () {
   $('#reminder-message').text('Error occured when updating a reminder.')
-  console.error('onCultivateUpdateFailure ran. Error is :', error)
-
   $('form').trigger('reset')
 }
 
 const onCultivateDeleteSuccess = function (data) {
-  console.log('onCultivateDeleteSuccess data ran ', data)
   $('#reminder-message').text('Click "Get Reminders" to see your updated reminders!')
 
   $('form').trigger('reset')
 }
 
-const onCultivateDeleteFailure = function (error) {
+const onCultivateDeleteFailure = function () {
   $('#reminder-message').text('Error occured when deleting a reminder.')
-  console.error('onCultivateDeleteFailure ran. Error is :', error)
 
   $('form').trigger('reset')
 }
