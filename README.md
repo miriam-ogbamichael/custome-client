@@ -1,7 +1,5 @@
 # custome-client
 
-
-
 1. ## Application description:
 
 I beleive that everyone would value having reminder messages desinged to cultivate mindsets that are customized to their personal needs.
@@ -37,6 +35,8 @@ https://drive.google.com/file/d/17eTIh-Uq74TVYjiJ1BVpS9ed_lHExIxJ/view?usp=shari
 https://github.com/miriam-ogbamichael/custome-api
 
 7. ## Deployed CustoME App Client
+
+https://miriam-ogbamichael.github.io/custome-client/
 
 8. ## Deployed CustoME App Api
 
