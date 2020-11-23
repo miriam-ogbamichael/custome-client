@@ -11,7 +11,10 @@ const create = function (data) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: data
+    data: {
+      title: data.title,
+      reminder: data.reminder
+    }
   })
 }
 
@@ -20,7 +23,7 @@ const create = function (data) {
 const index = function (reminder) {
   console.log('reminder: ', reminder)
   return $.ajax({
-    url: config.apiUrl + 'reminders/' + reminder.id,
+    url: config.apiUrl + '/reminders',
     method: 'GET',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -28,18 +31,19 @@ const index = function (reminder) {
   })
 }
 
-// SHOW
-// Lets user see one of their reminders
-const show = function (reminder) {
-  console.log('reminder: ', reminder)
-  return $.ajax({
-    url: config.apiUrl + '/reminders' + reminder.id,
-    method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
-  })
-}
+// // SHOW
+// // Lets user see one of their reminders
+// const show = function (data) {
+//   console.log('reminder: ', data)
+//   return $.ajax({
+//     url: config.apiUrl + '/reminders',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     },
+//     data: data
+//   })
+// }
 
 // UPDATE
 // Lets user update any of their Reminders
@@ -57,10 +61,10 @@ const update = function (data) {
 
 // DESTROY
 // Lets user delete any of thier Reminders
-const destroy = function (id) {
-  console.log('id: ', id)
+const destroy = function (data) {
+  console.log('data: ', data)
   return $.ajax({
-    url: config.apiUrl + '/reminders/' + id,
+    url: config.apiUrl + '/reminders/' + data.reminder.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -71,7 +75,7 @@ const destroy = function (id) {
 module.exports = {
   create,
   index,
-  show,
+  // show,
   update,
   destroy
 }

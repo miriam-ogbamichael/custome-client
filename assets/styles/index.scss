@@ -5,9 +5,9 @@ body {
   text-align: center;
 }
 
-div {
-  background-color: rgb(255, 237, 81);
-}
+// div {
+//   background-color: rgb(255, 237, 81);
+// }
 
 form {
   text-align: center;
@@ -16,7 +16,7 @@ form {
 // centers h1
 h1 {
   color: rgba(122, 229, 235, 1);
-  font-size: 15vh;
+  font-size: 20vh;
   text-align: center;
   text-shadow: 2px 2px rgba(0, 0, 0, .45);
 }
@@ -30,7 +30,7 @@ h2 {
 
 h3 {
   color: rgb(229, 128, 255);
-  font-size: 5vh;
+  font-size: 7vh;
   text-align: center;
   text-shadow: 2px 2px rgba(0, 0, 0, .20);
 }
@@ -47,4 +47,8 @@ label {
 legend {
   color: rgba(122, 122, 235, 1);
   text-shadow: 2px 2px rgba(0, 0, 0, .05);
+}
+
+p {
+  background-color: rgb(255, 237, 81);
 }
