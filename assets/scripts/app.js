@@ -6,5 +6,6 @@ const reminderEvents = require('./reminder/events')
 $(() => {
   authEvents.addHandlers()
   console.log('authEvents.addHanlers in app.js ran')
-  $('#cultivate-create-form').on('submit', reminderEvents.onCultivateCreate)
+  reminderEvents.addHandlers()
+  console.log('reminderEvents.addHanlers in app.js ran')
 })
