@@ -8,7 +8,6 @@ const ui = require('./ui')
 
 // SIGN UP event handler
 const onSignUp = function (event) {
-  console.log('onSignUp in events.js ran')
   // prevents default action of refreshing page
   event.preventDefault()
   // send data from form to the API
@@ -23,7 +22,6 @@ const onSignUp = function (event) {
 
 // SIGN IN event handler
 const onSignIn = function (event) {
-  console.log('onSignIn in events.js ran')
   // prevents default action of refreshing page
   event.preventDefault()
   // send data from form to the API
@@ -38,7 +36,6 @@ const onSignIn = function (event) {
 
 // CHANGE PASSWORD event handler
 const onChangePassword = function (event) {
-  // console.log('onChangePassword in events.js ran')
   // prevents default action of refreshing page
   event.preventDefault()
   // send data from form to the API
@@ -53,7 +50,6 @@ const onChangePassword = function (event) {
 
 // SIGN OUT event handler
 const onSignOut = function (event) {
-  // console.log('onSignOut in events.js ran')
   // prevents default action of refreshing page
   event.preventDefault()
   // send data from form to the API
@@ -67,11 +63,14 @@ const onSignOut = function (event) {
 }
 
 const addHandlers = () => {
-  // console.log('addHandlers in events.js ran')
   $('#sign-up-form').on('submit', onSignUp)
   $('#sign-in-form').on('submit', onSignIn)
   $('#change-password-form').on('submit', onChangePassword)
   $('#sign-out-form').on('submit', onSignOut)
+  $('#sign-up-form').show()
+  $('#sign-in-form').show()
+  $('#change-password-form').hide()
+  $('#sign-out-form').hide()
 }
 
 module.exports = {
