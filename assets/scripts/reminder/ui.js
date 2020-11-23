@@ -51,6 +51,7 @@ const onCultivateUpdateSuccess = function (data) {
   $('#reminder-message').text('Click "Get Reminders" to see your updated reminders!')
 
   $('form').trigger('reset')
+  $('#reminder-message').show()
 }
 
 const onCultivateUpdateFailure = function () {
