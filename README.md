@@ -23,7 +23,7 @@ I've always wanted to integrate my background in psychology and my personal inte
 
 ## Project Planning
 
-  I began by making the ERD, user stories, and the Wireframes. Afterwards, I jotted down all the CRUD commands that I will need for the resource(s) that I would be building out. I then created a timeline of what I needed to complete by when, making sure to incude buffer time zomes for debugging errors that would come up along the way. I tackeled errors and problems that arose by googleing the various error messages I received and by refering to the documentation of the particular technology I was utelizing. I also made sure to reach out to my fellow cohort members and the instructors for additional aid if my personal efforts were futile.
+  I began by making the ERD, user stories, and the Wireframes. Afterwards, I jotted down all the CRUD commands that I will need for the resource(s) that I would be building out. I then created a timeline of what I needed to complete by when, making sure to include buffer time zones for debugging errors that would come up along the way. I tackeled errors and problems that arose by googleing the various error messages I received and by refering to the documentation of the particular technology I was utelizing. I also made sure to reach out to my fellow cohort members and the instructors for additional aid if my personal efforts were futile.
 
 ## Wireframes
 
